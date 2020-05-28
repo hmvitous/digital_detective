@@ -1,7 +1,7 @@
 import React from "react";
 import Tilt from "react-tilt";
-import './Logo.css'
-import search from './search.png'
+import "./Logo.css";
+import search from "./search.png";
 
 const Logo = () => {
   return (
@@ -11,7 +11,9 @@ const Logo = () => {
         options={{ max: 60 }}
         style={{ height: 250, width: 250 }}
       >
-        <div className="Tilt-inner"><img alt='Face Search Logo' src={search}/></div>
+        <div className="Tilt-inner">
+          <img alt="Face Search Logo" src={search} />
+        </div>
       </Tilt>
     </div>
   );
