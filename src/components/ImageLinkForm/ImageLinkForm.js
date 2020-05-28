@@ -8,11 +8,13 @@ const ImageLinkForm = () => {
           "This Digital Detective will find the faces in your pictures. Put him on the case"
         }
       </p>
-      <div>
-        <input className="f4 pa2 w-70 center" type="text" />
-        <button className="w-30 grow f4 link ph3 pv2 dib white bg-light-purple">
-          Detect
-        </button>
+      <div className="center">
+        <div className="center pa4 br3 shadow-5">
+          <input className="f4 pa2 w-70 center" type="text" />
+          <button className="w-30 grow f4 link ph3 pv2 dib white bg-light-purple">
+            Detect
+          </button>
+        </div>
       </div>
     </div>
   );
