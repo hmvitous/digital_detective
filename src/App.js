@@ -14,14 +14,6 @@ const particlesOptions = {
         enable: true,
         value_area: 800,
       },
-      interactivity: {
-        events: {
-          onhover: {
-            enable: true,
-            mode: "repulse",
-          },
-        },
-      },
     },
   },
 };
