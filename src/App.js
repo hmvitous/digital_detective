@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navigation from "./components/Navigation/Navigation";
 import Logo from "./components/Logo/Logo";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
+import FaceRecognition from './components/FaceRecognition/FaceRecognition'
 import Rank from "./components/Rank/Rank";
 import Particles from "react-particles-js";
 import Clarifai from "clarifai";
@@ -34,6 +35,7 @@ class App extends Component {
   onInputChange = (event) => {
     console.log(event.target.value);
   };
+
   onSubmit = () => {
     console.log("click");
     app.models
@@ -43,7 +45,7 @@ class App extends Component {
       )
       .then(
         function (response) {
-          // do something with response
+          console.log(response);
         },
         function (err) {
           // there was an error
@@ -62,7 +64,7 @@ class App extends Component {
           onInputChange={this.onInputChange}
           onSubmit={this.onSubmit}
         />
-        {/* <FaceRecognition />  */}
+        <FaceRecognition /> 
       </div>
     );
   }
