@@ -41,7 +41,7 @@ class App extends Component {
     const width = Number(image.width);
     const height = Number(image.height);
     return {
-      leftCol: clarafaiFace.left * width,
+      leftCol: clarafaiFace.left_col * width,
       topRow: clarafaiFace.top_row * height,
       rightCol: width - clarafaiFace.right_col * width,
       bottomRow: height - clarafaiFace.bottom_row * height,
@@ -75,7 +75,7 @@ class App extends Component {
           onInputChange={this.onInputChange}
           onSubmit={this.onSubmit}
         />
-        <FaceRecognition imageUrl={this.state.imageUrl} />
+        <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl} />
       </div>
     );
   }
