@@ -18,9 +18,21 @@ class SignIn extends React.Component {
   };
 
   onSubmitSignIn = () => {
-    console.log(this.state)
-    this.props.onRouteChange('home')
-  }
+    fetch("http://localhost:3000/signin", {
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: this.state.signInEmail,
+        password: this.state.signInPassword,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data === "success") {
+          this.props.onRouteChange("home");
+        }
+      });
+  };
 
   render() {
     const { onRouteChange } = this.props;
@@ -35,6 +47,7 @@ class SignIn extends React.Component {
                   Email
                 </label>
                 <input
+                  onChange={this.onEmailChange}
                   className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                   type="email"
                   name="email-address"
@@ -46,6 +59,7 @@ class SignIn extends React.Component {
                   Password
                 </label>
                 <input
+                  onChange={this.onPasswordChange}
                   className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                   type="password"
                   name="password"
