@@ -6,7 +6,7 @@ const ImageLinkForm = ({ onInputChange, onSubmit }) => {
     <div>
       <p className="f3">
         {
-          "This Digital Detective will find the faces in your pictures. Put him on the case!"
+          "This Digital Detective will find a face in your pictures. Put him on the case!"
         }
       </p>
       <div className="center">
